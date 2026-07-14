@@ -1,0 +1,99 @@
+name,ats,slug,career_url,hq,region,industry,priority,visa_sponsor,writer_frequency,avg_salary_usd,remote,notes
+Anthropic,greenhouse,anthropic,https://www.anthropic.com/careers,San Francisco,US,AI,5,yes,high,140000-200000,hybrid,Direct AI docs experience match
+OpenAI,google,,https://openai.com/careers,San Francisco,US,AI,5,yes,high,160000-250000,no,Top AI company - SDK/API docs
+Mistral AI,lever,mistral,https://mistral.ai/careers,Paris,EU,AI,5,yes,medium,80000-130000,hybrid,EU-based AI - already applying
+Cohere,google,,https://cohere.com/careers,Toronto,Remote,AI,5,yes,medium,120000-170000,yes,API/SDK docs focus
+Hugging Face,google,,https://huggingface.co/jobs,Paris,EU,AI,5,yes,medium,90000-150000,yes,Open-source AI - EU based
+DeepL,google,,https://www.deepl.com/careers,Cologne,EU,AI,5,yes,medium,70000-110000,hybrid,EU AI + bilingual value
+Google DeepMind,google,,https://deepmind.google/careers,London,EU,AI,5,yes,high,120000-180000,no,Top AI research
+Meta AI,google,,https://www.metacareers.com,Menlo Park,US,AI,4,yes,high,150000-220000,hybrid,Large AI division
+xAI,greenhouse,xai,https://x.ai/careers,San Francisco,US,AI,4,yes,medium,150000-230000,no,Growing AI company
+Inflection AI,greenhouse,inflectionai,https://inflection.ai/careers,Palo Alto,US,AI,4,yes,low,140000-200000,no,Conversational AI
+Perplexity AI,google,,https://www.perplexity.ai/careers,San Francisco,US,AI,4,yes,medium,140000-200000,hybrid,AI search
+Stability AI,greenhouse,stabilityai,https://stability.ai/careers,London,EU,AI,4,yes,low,90000-140000,yes,EU-based AI
+ElevenLabs,google,,https://elevenlabs.io/careers,London,EU,AI,4,yes,low,80000-130000,yes,EU AI - voice/audio
+Runway,google,,https://runwayml.com/careers,New York,US,AI,4,yes,low,130000-180000,hybrid,Creative AI
+Character AI,google,,https://character.ai/careers,Menlo Park,US,AI,3,yes,low,140000-200000,no,Conversational AI
+Aleph Alpha,google,,https://aleph-alpha.com/careers,Heidelberg,EU,AI,4,yes,low,70000-110000,hybrid,EU sovereign AI
+Databricks,greenhouse,databricks,https://www.databricks.com/company/careers,San Francisco,US,AI/Data,5,yes,high,140000-200000,hybrid,Data+AI platform - strong docs team
+Scale AI,greenhouse,scaleai,https://scale.com/careers,San Francisco,US,AI,4,yes,medium,130000-190000,hybrid,AI data platform
+Weights & Biases,google,,https://wandb.ai/careers,San Francisco,US,AI/ML,5,yes,medium,130000-180000,yes,ML developer tools - docs focused
+LangChain,google,,https://www.langchain.com/careers,San Francisco,US,AI,5,yes,medium,130000-180000,yes,LLM framework - heavy docs needs
+Replicate,google,,https://replicate.com/about,San Francisco,US,AI,4,yes,low,130000-180000,yes,ML API platform
+Together AI,greenhouse,togetherai,https://www.together.ai/careers,San Francisco,US,AI,4,yes,medium,140000-200000,hybrid,AI infrastructure
+Pinecone,google,,https://www.pinecone.io/careers,New York,US,AI,4,yes,medium,130000-180000,yes,Vector DB - API docs
+Weaviate,google,,https://weaviate.io/company/careers,Amsterdam,EU,AI,5,yes,low,70000-110000,yes,EU vector DB - developer docs
+Qdrant,google,,https://qdrant.tech/careers,Berlin,EU,AI,4,yes,low,60000-100000,yes,EU vector DB
+Chroma,google,,https://www.trychroma.com/careers,San Francisco,US,AI,3,yes,low,120000-170000,yes,Vector DB
+Modal,google,,https://modal.com/careers,New York,US,AI,4,yes,low,140000-190000,yes,Serverless AI infra
+Anyscale,lever,anyscale,https://www.anyscale.com/careers,San Francisco,US,AI,4,yes,medium,140000-190000,hybrid,Ray/AI infra
+AssemblyAI,greenhouse,assemblyai,https://www.assemblyai.com/careers,San Francisco,US,AI,4,yes,medium,120000-170000,yes,Speech AI - API docs
+Cerebras,google,,https://cerebras.ai/careers,Sunnyvale,US,AI,3,yes,low,140000-200000,no,AI hardware
+NVIDIA,google,,https://nvidia.wd5.myworkdayjobs.com,Santa Clara,US,AI/Hardware,4,yes,high,140000-210000,hybrid,AI hardware + SDK docs
+Stripe,greenhouse,stripe,https://stripe.com/jobs,San Francisco,US,Fintech/DevTools,5,yes,high,150000-220000,hybrid,Gold standard API docs
+Cloudflare,greenhouse,cloudflare,https://www.cloudflare.com/careers,San Francisco,US,Cloud,5,yes,high,130000-190000,hybrid,Developer platform - strong docs
+Vercel,greenhouse,vercel,https://vercel.com/careers,San Francisco,US,DevTools,5,yes,medium,140000-200000,yes,Frontend infra - docs-as-code
+Twilio,greenhouse,twilio,https://www.twilio.com/company/jobs,San Francisco,US,Communication,5,yes,high,120000-180000,yes,API/SDK docs - comms platform match
+Figma,greenhouse,figma,https://www.figma.com/careers,San Francisco,US,Design,4,yes,medium,140000-200000,hybrid,Design tools
+Notion,google,,https://www.notion.so/careers,San Francisco,US,Productivity,4,yes,medium,130000-190000,hybrid,Knowledge management
+Discord,greenhouse,discord,https://discord.com/careers,San Francisco,US,Communication,4,yes,medium,130000-190000,hybrid,Communication platform
+Linear,google,,https://linear.app/careers,San Francisco,US,DevTools,4,yes,low,140000-190000,yes,Project management
+Postman,greenhouse,postman,https://www.postman.com/company/careers,San Francisco,US,DevTools,5,yes,medium,120000-170000,yes,API tools - direct domain match
+GitLab,greenhouse,gitlab,https://about.gitlab.com/jobs,San Francisco,Remote,DevTools,5,yes,high,110000-170000,yes,All-remote - strong docs culture
+GitHub,google,,https://github.com/about/careers,San Francisco,US,DevTools,5,yes,high,140000-200000,hybrid,Developer platform
+Docker,google,,https://www.docker.com/careers,Palo Alto,US,DevTools,4,yes,medium,120000-170000,yes,Container platform
+Atlassian,lever,atlassian,https://www.atlassian.com/company/careers,Sydney,Remote,DevTools,4,yes,high,110000-170000,yes,Large docs team
+JetBrains,google,,https://www.jetbrains.com/careers,Prague,EU,DevTools,4,yes,medium,60000-100000,hybrid,EU developer tools
+HashiCorp,google,,https://www.hashicorp.com/careers,San Francisco,US,DevTools,4,yes,medium,130000-180000,yes,Infra tools - docs heavy
+Snyk,google,,https://snyk.io/careers,London,EU,Security,4,yes,medium,90000-140000,hybrid,Developer security - EU
+Datadog,greenhouse,datadog,https://careers.datadoghq.com,New York,US,Observability,4,yes,high,130000-190000,hybrid,Monitoring platform
+Elastic,greenhouse,elastic,https://www.elastic.co/careers,Amsterdam,EU,Search,4,yes,medium,90000-150000,yes,EU-based - open source docs
+MongoDB,greenhouse,mongodb,https://www.mongodb.com/careers,New York,US,Database,5,yes,high,130000-180000,hybrid,Strong docs team - developer docs
+Grafana Labs,greenhouse,grafanalabs,https://grafana.com/about/careers,New York,Remote,Observability,4,yes,medium,110000-160000,yes,Open source - remote first
+Confluent,google,,https://www.confluent.io/careers,Mountain View,US,Data,4,yes,medium,130000-180000,hybrid,Data streaming platform
+Supabase,google,,https://supabase.com/careers,Singapore,Remote,Database,5,yes,medium,120000-170000,yes,Open source - great docs
+Kong,google,,https://konghq.com/careers,San Francisco,US,API,5,yes,medium,120000-170000,yes,API gateway - domain match
+Temporal,google,,https://temporal.io/careers,Seattle,US,DevTools,4,yes,low,140000-190000,yes,Workflow engine
+Prisma,greenhouse,prisma,https://www.prisma.io/careers,Berlin,EU,DevTools,4,yes,low,70000-110000,yes,EU - ORM/database tools
+LaunchDarkly,greenhouse,launchdarkly,https://launchdarkly.com/careers,Oakland,US,DevTools,3,yes,low,120000-170000,yes,Feature flags
+Deno,google,,https://deno.com/careers,New York,Remote,DevTools,3,yes,low,120000-170000,yes,JS runtime
+Fermyon,google,,https://www.fermyon.com/careers,Austin,US,DevTools,3,yes,low,120000-170000,yes,WebAssembly
+Amazon AWS,google,,https://www.amazon.jobs/en/teams/amazon-web-services,Seattle,US,Cloud,5,yes,high,130000-190000,hybrid,Massive docs team
+Microsoft,google,,https://careers.microsoft.com,Redmond,US,Cloud,5,yes,high,130000-200000,hybrid,Large docs org - learn.microsoft.com
+Google Cloud,google,,https://careers.google.com,Mountain View,US,Cloud,5,yes,high,140000-210000,hybrid,Cloud docs
+Apple,google,,https://jobs.apple.com,Cupertino,US,Consumer Tech,4,yes,high,140000-200000,no,Developer docs
+Snowflake,google,,https://careers.snowflake.com,Bozeman,US,Data,4,yes,medium,130000-190000,hybrid,Data platform
+Render,google,,https://render.com/careers,San Francisco,US,Cloud,3,yes,low,130000-180000,yes,Cloud platform
+Netlify,greenhouse,netlify,https://www.netlify.com/careers,San Francisco,US,Cloud,3,yes,low,120000-170000,yes,Web deployment
+Spotify,lever,spotify,https://www.lifeatspotify.com/jobs,Stockholm,EU,Entertainment,4,yes,medium,80000-130000,hybrid,EU tech - large eng org
+Klarna,google,,https://www.klarna.com/careers,Stockholm,EU,Fintech,3,yes,medium,70000-120000,hybrid,EU fintech
+Wise,google,,https://www.wise.com/careers,London,EU,Fintech,4,yes,medium,70000-120000,hybrid,EU fintech - API products
+Revolut,google,,https://www.revolut.com/careers,London,EU,Fintech,3,yes,medium,70000-120000,hybrid,EU fintech
+N26,greenhouse,n26,https://n26.com/en/careers,Berlin,EU,Fintech,3,yes,low,60000-100000,hybrid,EU fintech
+Contentful,greenhouse,contentful,https://www.contentful.com/careers,Berlin,EU,CMS,4,yes,medium,70000-110000,hybrid,EU - headless CMS - API docs
+SAP,google,,https://jobs.sap.com,Walldorf,EU,Enterprise,3,yes,high,70000-120000,hybrid,Large EU tech
+Booking.com,google,,https://jobs.booking.com,Amsterdam,EU,Travel,3,yes,medium,70000-120000,hybrid,EU tech
+Adyen,greenhouse,adyen,https://careers.adyen.com,Amsterdam,EU,Fintech,4,yes,medium,70000-120000,hybrid,EU payments - API docs
+Miro,google,,https://miro.com/careers,Amsterdam,EU,Collaboration,3,yes,medium,70000-120000,hybrid,EU - collaboration tools
+Slack (Salesforce),google,,https://careers.salesforce.com,San Francisco,US,Communication,4,yes,high,130000-190000,hybrid,API platform
+Plaid,lever,plaid,https://plaid.com/careers,San Francisco,US,Fintech,4,yes,medium,140000-190000,hybrid,Financial API - docs focused
+Block (Square),greenhouse,block,https://block.xyz/careers,San Francisco,US,Fintech,4,yes,medium,130000-190000,hybrid,Payment APIs
+Brex,greenhouse,brex,https://www.brex.com/careers,San Francisco,US,Fintech,3,yes,low,140000-190000,hybrid,Fintech
+CrowdStrike,google,,https://www.crowdstrike.com/careers,Austin,US,Security,4,yes,medium,120000-170000,hybrid,Security platform
+1Password,google,,https://1password.com/careers,Toronto,Remote,Security,4,yes,medium,110000-160000,yes,Remote-first security
+Red Hat,google,,https://www.redhat.com/en/jobs,Raleigh,Remote,Open Source,4,yes,high,100000-150000,yes,Open source - large docs team
+Canonical,greenhouse,canonical,https://canonical.com/careers,London,Remote,Open Source,4,yes,medium,70000-120000,yes,Ubuntu - remote global
+Grammarly,google,,https://www.grammarly.com/careers,San Francisco,US,AI/Writing,4,yes,medium,130000-180000,hybrid,AI writing - relevant domain
+Writer (AI),google,,https://writer.com/careers,San Francisco,US,AI/Writing,4,yes,low,130000-180000,yes,Enterprise AI writing
+Jasper AI,google,,https://www.jasper.ai/careers,Austin,US,AI/Writing,3,yes,low,110000-160000,yes,AI content
+Descript,greenhouse,descript,https://www.descript.com/careers,San Francisco,US,AI/Media,3,yes,low,120000-170000,hybrid,AI video/audio
+LINE (LY Corp),google,,https://linecorp.com/en/career,Tokyo,Asia,Communication,3,sometimes,low,60000-100000,no,Chat platform - Korean company
+Grab,google,,https://grab.careers,Singapore,Asia,Super App,3,sometimes,low,50000-90000,no,Southeast Asia tech
+Coupang,google,,https://www.coupang.jobs,Seoul,Asia,E-commerce,2,no,low,50000-80000,no,Korean - limited docs roles
+Shopify,google,,https://www.shopify.com/careers,Ottawa,Remote,E-commerce,4,yes,medium,110000-160000,yes,Large docs team - API/SDK
+Twitch,greenhouse,twitch,https://www.twitch.tv/jobs,San Francisco,US,Entertainment,3,yes,medium,130000-180000,hybrid,Developer API docs
+Rippling,google,,https://www.rippling.com/careers,San Francisco,US,HR Tech,3,yes,medium,130000-180000,hybrid,Growing fast
+Airtable,greenhouse,airtable,https://airtable.com/careers,San Francisco,US,Productivity,3,yes,low,130000-180000,hybrid,API platform
+Retool,google,,https://retool.com/careers,San Francisco,US,DevTools,4,yes,low,140000-190000,hybrid,Internal tools - API docs
+Webflow,greenhouse,webflow,https://webflow.com/careers,San Francisco,US,Web/Design,3,yes,low,120000-170000,yes,Web platform
+Sentry,google,,https://sentry.io/careers,San Francisco,US,DevTools,4,yes,medium,130000-180000,hybrid,Error monitoring - SDK docs match
