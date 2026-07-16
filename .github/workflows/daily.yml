@@ -2,8 +2,8 @@ name: Daily Job Crawl
 
 on:
   schedule:
-    # Run daily at 09:00 UTC (18:00 KST)
-    - cron: "0 9 * * *"
+    # Run daily at 08:00 UTC (17:00 KST)
+    - cron: "0 8 * * *"
   workflow_dispatch: # Allow manual trigger
 
 jobs:
