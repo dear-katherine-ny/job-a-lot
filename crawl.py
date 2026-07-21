@@ -28,6 +28,7 @@ load_dotenv()
 TITLE_KEYWORDS = [
     "technical writer",
     "documentation engineer",
+    "documentation writer",
     "technical author",
     "documentation specialist",
     "developer documentation",
@@ -38,6 +39,8 @@ TITLE_KEYWORDS = [
     "ux writer",
     "content strategist",
     "docs engineer",
+    "documentation manager",
+    "technical documentation",
 ]
 
 COMPANIES_CSV = Path(__file__).parent / "companies.csv"
@@ -95,45 +98,62 @@ def crawl_lever(slug: str) -> list[dict]:
         return []
 
 
-def crawl_google(company_name: str, career_url: str) -> list[dict]:
-    """Search for job postings via Google Custom Search API."""
+def crawl_google_consolidated() -> list[dict]:
+    """Search for job postings via Google Custom Search API using consolidated queries.
+
+    Instead of one API call per company, runs a few keyword-based queries
+    across job platforms to stay within the free 100 queries/day limit.
+    """
     api_key = os.getenv("GOOGLE_CSE_API_KEY")
     cse_id = os.getenv("GOOGLE_CSE_ID")
     if not api_key or not cse_id:
         return []
 
-    # Build query with title keywords
-    keyword_query = " OR ".join(f'"{kw}"' for kw in TITLE_KEYWORDS[:5])
-    query = f'{company_name} ({keyword_query})'
+    # Consolidated queries — each covers many companies at once
+    queries = [
+        '"technical writer" OR "documentation engineer" OR "documentation writer"',
+        '"technical author" OR "docs engineer" OR "documentation specialist"',
+        '"developer documentation" OR "api documentation" OR "documentation manager"',
+        '"technical writer" remote Australia',
+        '"documentation engineer" remote Europe',
+    ]
 
     url = "https://www.googleapis.com/customsearch/v1"
-    params = {
-        "key": api_key,
-        "cx": cse_id,
-        "q": query,
-        "num": 10,
-        "dateRestrict": "w1",  # Last week
-    }
+    all_jobs = []
+    seen_urls = set()
 
-    try:
-        resp = requests.get(url, params=params, timeout=15)
-        if resp.status_code != 200:
-            return []
-        data = resp.json()
-        jobs = []
-        for item in data.get("items", []):
-            title = item.get("title", "")
-            link = item.get("link", "")
-            if _matches_title(title) and _is_job_url(link):
-                jobs.append({
-                    "title": title,
-                    "url": link,
-                    "location": "",
-                    "posted": "",
-                })
-        return jobs
-    except requests.RequestException:
-        return []
+    for query in queries:
+        params = {
+            "key": api_key,
+            "cx": cse_id,
+            "q": query,
+            "num": 10,
+            "dateRestrict": "w1",  # Last week
+        }
+        try:
+            resp = requests.get(url, params=params, timeout=15)
+            if resp.status_code != 200:
+                continue
+            data = resp.json()
+            for item in data.get("items", []):
+                title = item.get("title", "")
+                link = item.get("link", "")
+                if link in seen_urls:
+                    continue
+                if _matches_title(title) and _is_job_url(link):
+                    company = _extract_company_from_url(link)
+                    all_jobs.append({
+                        "title": title,
+                        "url": link,
+                        "location": "",
+                        "posted": "",
+                        "company": company,
+                    })
+                    seen_urls.add(link)
+        except requests.RequestException:
+            continue
+
+    return all_jobs
 
 
 # ---------------------------------------------------------------------------
@@ -158,8 +178,40 @@ def _is_job_url(url: str) -> bool:
     job_indicators = [
         "jobs", "careers", "greenhouse", "lever",
         "workday", "linkedin.com/jobs", "posting",
+        "indeed.com", "glassdoor.com", "seek.com.au",
     ]
     return any(ind in url.lower() for ind in job_indicators)
+
+
+def _extract_company_from_url(url: str) -> str:
+    """Best-effort company name extraction from a job posting URL."""
+    url_lower = url.lower()
+    # Known job board patterns
+    if "greenhouse.io" in url_lower:
+        # https://boards.greenhouse.io/companyname/...
+        parts = url.split("/")
+        for i, p in enumerate(parts):
+            if "greenhouse" in p.lower() and i + 1 < len(parts):
+                return parts[i + 1].replace("-", " ").title()
+    if "lever.co" in url_lower:
+        # https://jobs.lever.co/companyname/...
+        parts = url.split("/")
+        for i, p in enumerate(parts):
+            if "lever" in p.lower() and i + 1 < len(parts):
+                return parts[i + 1].replace("-", " ").title()
+    if "linkedin.com" in url_lower:
+        return "LinkedIn Posting"
+    if "indeed.com" in url_lower:
+        return "Indeed Posting"
+    if "seek.com" in url_lower:
+        return "Seek Posting"
+    # Fallback: use domain name
+    try:
+        from urllib.parse import urlparse
+        domain = urlparse(url).netloc.replace("www.", "")
+        return domain.split(".")[0].title()
+    except Exception:
+        return "Unknown"
 
 
 def load_companies() -> list[dict]:
@@ -240,21 +292,32 @@ def append_jobs(worksheet, jobs: list[dict]):
 
 
 def send_notification(new_jobs: list[dict]):
-    """Send email notification for new job postings."""
+    """Send email notification for job crawl results (including zero results)."""
     smtp_email = os.getenv("SMTP_EMAIL")
     smtp_password = os.getenv("SMTP_PASSWORD")
-    if not smtp_email or not smtp_password or not new_jobs:
+    if not smtp_email or not smtp_password:
         return
 
-    subject = f"[Job Crawler] {len(new_jobs)} new posting(s) found - {datetime.now().strftime('%Y-%m-%d')}"
+    today = datetime.now().strftime("%Y-%m-%d")
 
-    body_lines = [f"Found {len(new_jobs)} new job posting(s):\n"]
-    for job in new_jobs:
-        body_lines.append(f"🏢 {job['company']} (Priority: {job['priority']})")
-        body_lines.append(f"   {job['title']}")
-        body_lines.append(f"   📍 {job['location']}")
-        body_lines.append(f"   🔗 {job['url']}")
-        body_lines.append("")
+    if new_jobs:
+        subject = f"[Job Crawler] {len(new_jobs)} new posting(s) found - {today}"
+        body_lines = [f"Found {len(new_jobs)} new job posting(s):\n"]
+        for job in new_jobs:
+            priority_str = f" (Priority: {job['priority']})" if job['priority'] else ""
+            body_lines.append(f"🏢 {job['company']}{priority_str}")
+            body_lines.append(f"   {job['title']}")
+            if job['location']:
+                body_lines.append(f"   📍 {job['location']}")
+            body_lines.append(f"   🔗 {job['url']}")
+            body_lines.append("")
+    else:
+        subject = f"[Job Crawler] No new postings - {today}"
+        body_lines = [
+            "No new job postings found today.",
+            "",
+            "Crawler ran successfully — all results were either duplicates or no matches.",
+        ]
 
     body = "\n".join(body_lines)
 
@@ -291,23 +354,20 @@ def main():
     all_new_jobs = []
     total_found = 0
 
+    # Phase 1: Direct API crawling (Greenhouse/Lever — free, unlimited)
+    print("--- Phase 1: Direct API (Greenhouse/Lever) ---")
     for company in companies:
         name = company["name"]
         ats = company["ats"]
         slug = company["slug"]
-        career_url = company["career_url"]
         priority = company["priority"]
 
-        # Crawl based on ATS type
         if ats == "greenhouse" and slug:
             jobs = crawl_greenhouse(slug)
             source = "Greenhouse"
         elif ats == "lever" and slug:
             jobs = crawl_lever(slug)
             source = "Lever"
-        elif ats == "google":
-            jobs = crawl_google(name, career_url)
-            source = "Google Search"
         else:
             continue
 
@@ -328,6 +388,26 @@ def main():
                 })
                 existing_urls.add(job["url"])
 
+    # Phase 2: Consolidated Google Search (5 queries instead of 50+)
+    print("\n--- Phase 2: Consolidated Google Search ---")
+    google_jobs = crawl_google_consolidated()
+    if google_jobs:
+        total_found += len(google_jobs)
+        print(f"  Google Search: {len(google_jobs)} matching job(s)")
+
+    for job in google_jobs:
+        if job["url"] and job["url"] not in existing_urls:
+            all_new_jobs.append({
+                "date_found": today,
+                "company": job.get("company", "Unknown"),
+                "title": job["title"],
+                "location": job["location"],
+                "url": job["url"],
+                "source": "Google Search",
+                "priority": "",
+            })
+            existing_urls.add(job["url"])
+
     print(f"\n--- Results ---")
     print(f"Total matching jobs found: {total_found}")
     print(f"New (not in sheet): {len(all_new_jobs)}")
@@ -336,9 +416,8 @@ def main():
         append_jobs(worksheet, all_new_jobs)
         print(f"Appended {len(all_new_jobs)} rows to Google Sheets")
 
-        send_notification(all_new_jobs)
-    else:
-        print("No new postings today.")
+    # Always send notification (including zero results)
+    send_notification(all_new_jobs)
 
     # Console summary for CI logs
     if all_new_jobs:
