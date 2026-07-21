@@ -63,6 +63,8 @@ def crawl_greenhouse(slug: str) -> list[dict]:
             title = job.get("title", "")
             if _matches_title(title):
                 location = _extract_greenhouse_location(job)
+                if _is_excluded_location(location):
+                    continue
                 jobs.append({
                     "title": title,
                     "url": job.get("absolute_url", ""),
@@ -87,6 +89,8 @@ def crawl_lever(slug: str) -> list[dict]:
             title = job.get("text", "")
             if _matches_title(title):
                 location = job.get("categories", {}).get("location", "")
+                if _is_excluded_location(location):
+                    continue
                 jobs.append({
                     "title": title,
                     "url": job.get("hostedUrl", ""),
@@ -159,6 +163,19 @@ def crawl_google_consolidated() -> list[dict]:
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+
+EXCLUDED_LOCATIONS = [
+    "india", "bangalore", "bengaluru", "hyderabad", "mumbai",
+    "pune", "chennai", "delhi", "noida", "gurgaon", "gurugram",
+    "kolkata", "ahmedabad",
+]
+
+
+def _is_excluded_location(location: str) -> bool:
+    """Check if a job location is in an excluded region."""
+    location_lower = location.lower()
+    return any(loc in location_lower for loc in EXCLUDED_LOCATIONS)
 
 
 def _matches_title(title: str) -> bool:
