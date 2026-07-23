@@ -308,14 +308,36 @@ def append_jobs(worksheet, jobs: list[dict]):
 # ---------------------------------------------------------------------------
 
 
-def send_notification(new_jobs: list[dict]):
-    """Send email notification for job crawl results (including zero results)."""
+def send_notification(new_jobs: list[dict], worksheet=None):
+    """Send email notification for job crawl results (including zero results).
+
+    Checks the 'Metadata' sheet for the last email date to prevent
+    duplicate sends on the same day.
+    """
     smtp_email = os.getenv("SMTP_EMAIL")
     smtp_password = os.getenv("SMTP_PASSWORD")
     if not smtp_email or not smtp_password:
         return
 
     today = datetime.now().strftime("%Y-%m-%d")
+
+    # Dedup: skip if already sent today
+    if worksheet is not None:
+        try:
+            spreadsheet = worksheet.spreadsheet
+            try:
+                meta = spreadsheet.worksheet("Metadata")
+            except gspread.WorksheetNotFound:
+                meta = spreadsheet.add_worksheet("Metadata", rows=10, cols=2)
+                meta.update_cell(1, 1, "last_email_date")
+                meta.update_cell(1, 2, "")
+
+            last_date = meta.cell(1, 2).value
+            if last_date == today:
+                print(f"Email already sent today ({today}) — skipping")
+                return
+        except Exception as e:
+            print(f"Metadata check failed ({e}) — proceeding with send")
 
     if new_jobs:
         subject = f"[Job Crawler] {len(new_jobs)} new posting(s) found - {today}"
@@ -348,6 +370,14 @@ def send_notification(new_jobs: list[dict]):
             server.login(smtp_email, smtp_password)
             server.sendmail(smtp_email, smtp_email, msg.as_string())
         print(f"Email sent: {len(new_jobs)} new postings")
+
+        # Record send date to prevent duplicate sends
+        if worksheet is not None:
+            try:
+                meta = worksheet.spreadsheet.worksheet("Metadata")
+                meta.update_cell(1, 2, today)
+            except Exception:
+                pass
     except Exception as e:
         print(f"Email failed: {e}")
 
@@ -434,7 +464,7 @@ def main():
         print(f"Appended {len(all_new_jobs)} rows to Google Sheets")
 
     # Always send notification (including zero results)
-    send_notification(all_new_jobs)
+    send_notification(all_new_jobs, worksheet)
 
     # Console summary for CI logs
     if all_new_jobs:
