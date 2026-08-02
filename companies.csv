@@ -87,9 +87,85 @@ Grammarly,google,,https://www.grammarly.com/careers,San Francisco,US,AI/Writing,
 Writer (AI),google,,https://writer.com/careers,San Francisco,US,AI/Writing,4,yes,low,130000-180000,yes,Enterprise AI writing
 Jasper AI,google,,https://www.jasper.ai/careers,Austin,US,AI/Writing,3,yes,low,110000-160000,yes,AI content
 Descript,greenhouse,descript,https://www.descript.com/careers,San Francisco,US,AI/Media,3,yes,low,120000-170000,hybrid,AI video/audio
-LINE (LY Corp),google,,https://linecorp.com/en/career,Tokyo,Asia,Communication,3,sometimes,low,60000-100000,no,Chat platform - Korean company
-Grab,google,,https://grab.careers,Singapore,Asia,Super App,3,sometimes,low,50000-90000,no,Southeast Asia tech
-Coupang,google,,https://www.coupang.jobs,Seoul,Asia,E-commerce,2,no,low,50000-80000,no,Korean - limited docs roles
+Siemens,google,,https://jobs.siemens.com,Munich,EU,Industrial Tech,3,yes,high,70000-120000,hybrid,EU enterprise - large docs org
+Deutsche Telekom,google,,https://www.telekom.com/en/careers,Bonn,EU,Telecom,3,yes,medium,65000-110000,hybrid,Major EU telecom
+Software AG,google,,https://www.softwareag.com/en_corporate/company/careers.html,Darmstadt,EU,Enterprise Software,3,yes,medium,65000-110000,hybrid,EU enterprise integration
+TeamViewer,google,,https://www.teamviewer.com/en/careers,Göppingen,EU,Remote Access,3,yes,low,60000-100000,hybrid,Remote connectivity - API docs
+Zalando,greenhouse,zalando,https://jobs.zalando.com,Berlin,EU,E-commerce,3,yes,medium,65000-110000,hybrid,EU e-commerce tech
+Delivery Hero,greenhouse,deliveryhero,https://careers.deliveryhero.com,Berlin,EU,Delivery Tech,3,yes,medium,65000-110000,hybrid,EU delivery platform
+Personio,greenhouse,personio,https://www.personio.com/about-personio/careers,Munich,EU,HR Tech,4,yes,medium,70000-115000,hybrid,EU HR SaaS - API docs
+Celonis,google,,https://www.celonis.com/careers,Munich,EU,Process Mining,4,yes,medium,75000-120000,hybrid,EU AI/data - process mining
+commercetools,greenhouse,commercetools,https://commercetools.com/careers,Munich,EU,Commerce,4,yes,medium,70000-115000,hybrid,EU headless commerce - API docs
+Camunda,google,,https://camunda.com/careers,Berlin,EU,Process Automation,4,yes,medium,65000-110000,hybrid,EU workflow/process - developer docs
+SumUp,google,,https://www.sumup.com/careers,Berlin,EU,Fintech,3,yes,low,60000-100000,hybrid,EU payments tech
+Trade Republic,google,,https://traderepublic.com/careers,Berlin,EU,Fintech,3,yes,low,65000-105000,hybrid,EU fintech - growing
+GetYourGuide,google,,https://careers.getyourguide.com,Berlin,EU,Travel Tech,3,yes,medium,65000-110000,hybrid,EU travel platform
+Mambu,google,,https://www.mambu.com/careers,Berlin,EU,Banking Platform,4,yes,medium,65000-110000,hybrid,EU cloud banking - API docs
+Solarisbank,google,,https://www.solarisgroup.com/en/careers,Berlin,EU,Banking-as-a-Service,4,yes,medium,65000-105000,hybrid,EU BaaS - API docs
+Adjust,google,,https://www.adjust.com/company/careers,Berlin,EU,Mobile Analytics,3,yes,low,60000-100000,hybrid,EU mobile analytics
+Scout24,google,,https://www.scout24.com/en/career,Munich,EU,Platform,3,yes,low,65000-105000,hybrid,EU digital marketplace
+FlixBus,google,,https://www.flixbus.com/careers,Munich,EU,Mobility Tech,3,yes,medium,60000-100000,hybrid,EU mobility platform
+Trivago,google,,https://company.trivago.com/careers,Düsseldorf,EU,Travel Tech,3,yes,low,60000-100000,hybrid,EU travel search
+ASML,google,,https://www.asml.com/en/careers,Veldhoven,EU,Semiconductor,3,yes,high,75000-130000,hybrid,EU semiconductor - technical docs
+TomTom,google,,https://www.tomtom.com/careers,Amsterdam,EU,Mapping/Navigation,4,yes,medium,65000-110000,hybrid,EU mapping - API/SDK docs
+Mollie,google,,https://www.mollie.com/careers,Amsterdam,EU,Payments,4,yes,medium,70000-115000,hybrid,EU payments - API docs
+MessageBird,google,,https://messagebird.com/careers,Amsterdam,EU,Communication API,5,yes,medium,70000-115000,hybrid,EU comms API - direct domain match
+Backbase,google,,https://www.backbase.com/careers,Amsterdam,EU,Banking Platform,4,yes,medium,65000-110000,hybrid,EU digital banking - API docs
+Catawiki,google,,https://www.catawiki.com/en/jobs,Amsterdam,EU,E-commerce,3,yes,low,60000-100000,hybrid,EU online marketplace
+Bynder,google,,https://www.bynder.com/en/careers,Amsterdam,EU,DAM,3,yes,low,60000-100000,hybrid,EU digital asset management
+Intercom,greenhouse,intercom,https://www.intercom.com/careers,Dublin,EU,Customer Platform,5,yes,medium,80000-130000,hybrid,Ireland - API docs focus
+Workday,google,,https://www.workday.com/en-us/company/careers.html,Dublin,EU,HR/Finance SaaS,4,yes,high,80000-130000,hybrid,Ireland EU HQ - large docs team
+HubSpot,greenhouse,hubspot,https://www.hubspot.com/careers,Dublin,EU,Marketing/CRM,4,yes,high,75000-125000,hybrid,Ireland EU HQ - API docs
+Fenergo,google,,https://www.fenergo.com/careers,Dublin,EU,Fintech,3,yes,medium,65000-110000,hybrid,Ireland fintech - API platform
+Udemy,google,,https://about.udemy.com/careers,Dublin,EU,EdTech,3,yes,medium,70000-115000,hybrid,Ireland EU office
+Zendesk EU,greenhouse,zendesk,https://www.zendesk.com/careers,Dublin,EU,SaaS,4,yes,medium,75000-120000,hybrid,Ireland EU HQ - developer docs
+Squarespace EU,google,,https://www.squarespace.com/careers,Dublin,EU,Web Platform,3,yes,low,70000-115000,hybrid,Ireland EU HQ
+Stripe EU,greenhouse,stripe,https://stripe.com/jobs,Dublin,EU,Fintech/DevTools,5,yes,high,90000-150000,hybrid,Ireland EU HQ - gold standard docs
+Mastercard Tech,google,,https://careers.mastercard.com,Dublin,EU,Fintech,4,yes,high,75000-125000,hybrid,Ireland tech hub - API docs
+Checkout.com,greenhouse,checkoutcom,https://www.checkout.com/careers,London,EU,Payments,4,yes,medium,80000-130000,hybrid,UK payments - API docs
+Monzo,google,,https://monzo.com/careers,London,EU,Fintech,3,yes,medium,65000-110000,hybrid,UK digital bank
+GoCardless,google,,https://gocardless.com/careers,London,EU,Payments,4,yes,medium,70000-115000,hybrid,UK payments - API/SDK docs
+Improbable,google,,https://www.improbable.io/careers,London,EU,Metaverse/Gaming,3,yes,low,70000-120000,hybrid,UK spatial computing
+Thought Machine,google,,https://www.thoughtmachine.net/careers,London,EU,Banking Tech,4,yes,medium,70000-120000,hybrid,UK cloud banking - API docs
+Arm,google,,https://careers.arm.com,Cambridge,EU,Semiconductor,4,yes,high,70000-120000,hybrid,UK chip design - technical docs
+Darktrace,google,,https://darktrace.com/careers,Cambridge,EU,AI/Cybersecurity,4,yes,medium,65000-110000,hybrid,UK AI security
+Deliveroo,google,,https://careers.deliveroo.co.uk,London,EU,Delivery Tech,3,yes,medium,65000-110000,hybrid,UK delivery platform
+FNZ,google,,https://www.fnz.com/careers,London,EU,WealthTech,3,yes,medium,65000-110000,hybrid,UK wealth platform
+Criteo,google,,https://careers.criteo.com,Paris,EU,AdTech,3,yes,medium,65000-110000,hybrid,France - ad tech platform
+Dassault Systèmes,google,,https://www.3ds.com/careers,Paris,EU,Enterprise Software,3,yes,high,65000-115000,hybrid,France - 3D/PLM - large docs
+OVHcloud,google,,https://careers.ovhcloud.com,Roubaix,EU,Cloud,4,yes,medium,55000-95000,hybrid,France EU cloud - API docs
+Doctolib,google,,https://careers.doctolib.com,Paris,EU,HealthTech,3,yes,medium,60000-100000,hybrid,France health platform
+BlaBlaCar,google,,https://blog.blablacar.com/careers,Paris,EU,Mobility Tech,3,yes,low,55000-95000,hybrid,France mobility
+Dataiku,greenhouse,dataiku,https://www.dataiku.com/careers,Paris,EU,AI/Data,5,yes,medium,70000-120000,hybrid,France AI/ML platform - docs focus
+Algolia,google,,https://www.algolia.com/careers,Paris,EU,Search API,5,yes,medium,70000-120000,hybrid,France search API - developer docs
+Nokia,google,,https://www.nokia.com/careers,Espoo,EU,Telecom/5G,3,yes,high,65000-115000,hybrid,Finland - telecom tech docs
+Supercell,google,,https://supercell.com/en/careers,Helsinki,EU,Gaming,3,yes,medium,70000-120000,hybrid,Finland gaming
+Wolt,google,,https://careers.wolt.com,Helsinki,EU,Delivery Tech,3,yes,medium,60000-100000,hybrid,Finland delivery - DoorDash EU
+Trustpilot,google,,https://business.trustpilot.com/careers,Copenhagen,EU,Review Platform,3,yes,medium,65000-110000,hybrid,Denmark - platform
+Pleo,google,,https://www.pleo.io/en/careers,Copenhagen,EU,Fintech,3,yes,medium,65000-110000,hybrid,Denmark fintech - API docs
+Unity EU,google,,https://careers.unity.com,Copenhagen,EU,Gaming/3D,4,yes,medium,70000-120000,hybrid,Denmark EU office - SDK docs
+Templafy,google,,https://www.templafy.com/careers,Copenhagen,EU,Enterprise SaaS,3,yes,low,60000-100000,hybrid,Denmark document automation
+King (Activision),google,,https://careers.king.com,Stockholm,EU,Gaming,3,yes,medium,65000-110000,hybrid,Sweden gaming
+Tink,google,,https://tink.com/careers,Stockholm,EU,Open Banking,4,yes,medium,65000-110000,hybrid,Sweden open banking - API docs
+iZettle (PayPal),google,,https://www.zettle.com/careers,Stockholm,EU,Fintech,3,yes,medium,65000-110000,hybrid,Sweden payments
+Bolt,google,,https://bolt.eu/en/careers,Tallinn,EU,Mobility Tech,3,yes,medium,50000-90000,hybrid,Estonia mobility super-app
+Skype (Microsoft),google,,https://careers.microsoft.com,Tallinn,EU,Communication,3,yes,medium,55000-95000,hybrid,Estonia - MS comms
+UiPath,google,,https://www.uipath.com/company/careers,Bucharest,EU,RPA/AI,4,yes,medium,50000-90000,hybrid,Romania - AI automation - docs focus
+Revolut EU,google,,https://www.revolut.com/careers,Vilnius,EU,Fintech,3,yes,medium,50000-85000,hybrid,Lithuania EU hub
+Adyen EU,greenhouse,adyen,https://careers.adyen.com,Amsterdam,EU,Payments,4,yes,medium,75000-125000,hybrid,Netherlands payments - API docs
+Photoroom,google,,https://www.photoroom.com/careers,Paris,EU,AI,4,yes,low,65000-110000,hybrid,France AI image editing
+Poolside AI,google,,https://www.poolside.ai/careers,Paris,EU,AI,4,yes,low,80000-140000,hybrid,France AI coding assistant
+Cradle,google,,https://www.cradle.bio/careers,Amsterdam,EU,AI/Biotech,4,yes,low,65000-110000,hybrid,Netherlands AI protein design
+Synthesia,google,,https://www.synthesia.io/careers,London,EU,AI,4,yes,medium,75000-125000,hybrid,UK AI video generation
+PolyAI,google,,https://poly.ai/careers,London,EU,AI,4,yes,low,70000-115000,hybrid,UK conversational AI
+Wayve,google,,https://wayve.ai/careers,London,EU,AI,4,yes,medium,75000-125000,hybrid,UK autonomous driving AI
+Builder.ai,google,,https://www.builder.ai/careers,London,EU,AI,3,yes,low,60000-100000,hybrid,UK AI app development
+DeepL AI,google,,https://www.deepl.com/careers,Cologne,EU,AI,5,yes,medium,70000-120000,hybrid,Germany AI translation - API docs
+Helsing,google,,https://helsing.ai/careers,Munich,EU,AI/Defence,4,yes,low,80000-130000,hybrid,Germany AI defence
+Merantix,google,,https://merantix.com/career,Berlin,EU,AI,3,yes,low,60000-100000,hybrid,Germany AI venture studio
+DeepSpin,google,,https://www.deepspin.ai/careers,Munich,EU,AI/MedTech,3,yes,low,60000-100000,hybrid,Germany AI medical imaging
+Silo AI,google,,https://www.silo.ai/careers,Helsinki,EU,AI,4,yes,medium,65000-110000,hybrid,Finland AI - EU focused
+Corti,google,,https://www.corti.ai/careers,Copenhagen,EU,AI/HealthTech,4,yes,low,65000-110000,hybrid,Denmark AI health diagnostics
 Shopify,google,,https://www.shopify.com/careers,Ottawa,Remote,E-commerce,4,yes,medium,110000-160000,yes,Large docs team - API/SDK
 Twitch,greenhouse,twitch,https://www.twitch.tv/jobs,San Francisco,US,Entertainment,3,yes,medium,130000-180000,hybrid,Developer API docs
 Rippling,google,,https://www.rippling.com/careers,San Francisco,US,HR Tech,3,yes,medium,130000-180000,hybrid,Growing fast
